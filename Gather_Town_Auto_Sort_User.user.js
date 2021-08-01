@@ -15,7 +15,7 @@
     // Your code here...
 
     //var rAF = window.requestAnimationFrame;
-
+    
     function videoLoop() {
         var videos = document.querySelector("#videos");
         var videosPatched = false;
@@ -32,9 +32,9 @@
 
             for (var i = 0; i < usersCount; i++) {
                 var videoNode = videoNodes.children[i];
-                videoNode.setAttributesetAttribute('style', '');
+                //videoNode.setAttribute('style', ''); //force list all user...(but if too many user....)
 
-                if (videoNode.children[0].children[4].getAttribute("color") == "#06d6a0") {
+                if (videoNode.children[0].children[4] && videoNode.children[0].children[4].getAttribute("color") == "#06d6a0") {
                     console.log("User ID: " + i);
                     if (i >= head) {
                         videoNodes.removeChild(videoNode);
